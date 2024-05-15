@@ -1,0 +1,258 @@
+baseURL: "https://mayank.nl"
+languageCode: "en-us"
+title: "Mayank Sharma"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Mayank Sharma"
+  description: This is my portfolio, where I showcase my past, present and future projects.
+  favicon: "/website_logo_2.png"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+  navbar:
+    align: ms-auto 
+    brandName: "Mayank Sharma"
+    disableSearch: false
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Mayank."
+    subtitle: "I like developing software solutions."
+    content: "A passionate software engineer. I like to design and develop software that helps to fulfill the needs of the user."
+    image: /website_logo_2.png
+    bottomImage:
+      enable: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github # github
+          url: https://github.com/mayankshar21
+        - icon: fab fa-linkedin # linkedin
+          url: https://www.linkedin.com/in/mayankshar21/
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/me.png"
+    content: |-
+      I am passionate about Data, AI, ML, Cloud and DevOps. I have a background in software engineering. I always like challenges and finding solutions to complex technical and architectural problems. I have acquired architectural design skills that allow me to work with deeper levels of abstraction when translating requirements to code. I like playing video games, travelling, cooking, and cycling.
+    skills:
+      enable: true
+      title: "Here are tools, methodologies and technologies that I am using and learning:"
+      items:
+        - SOLID Principles
+        - Object-Oriented Programming
+        - Azure
+        - Google Cloud Platform
+        - Backend Development
+        - Docker
+        - Docker Compose
+        - CI/CD
+        - Software Design and Architecture
+        - Data Structures & Algorithms
+        - Python
+        - Java
+        - Agile
+        - Scrum
+        - .NET
+        - C#
+        - Web APIs 
+        - Data Engineering
+        - Machine Learning
+
+  projects:
+    enable: true
+    items:
+      - title: Personal Website
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /website_logo_2.png
+        featured:
+          name: Public Repo
+          link: https://github.com/mayankshar21/mayankshar21.github.io
+        badges:
+          - Hugo
+          - GitHub Pages
+          - NameCheap
+      - title: Development of Service Workbench for Software Delivery Platform
+        content: This project was part of the final 10-month-long project of the Engineering Doctorate program. It involved developing a new tool, Workbench, that allows Service Engineers to install, update, and troubleshoot their IT infrastructure efficiently.
+        image: /software_delivery_platform.jpeg
+        featured:
+          name: Public Thesis
+          link: https://research.tue.nl/en/publications/development-of-service-workbench-for-software-delivery-platform
+        badges:
+          - HTML
+          - CSS
+          - JavaScript
+          - Python
+          - Flask
+          - Docker
+          - GitLab
+          - JSON
+          - CI/CD
+          - Cypress
+          - Cucumber
+          - Pytest
+          - Bash
+          - Ubuntu Linux
+          - CentOS Linux
+          - Grafana
+          - Kibana
+          - Kubernetes Dashboard
+      - title: Run database for Large Hadron Collider experiment
+        content: This was the Third Training Project of the Engineering Doctorate program. It involved developing a simple, easy-to-use GUI for analyzing particle physics data at CERN in a team of 11 members.
+        image: /large_hadron_collider.jpeg
+        badges:
+          - React
+          - FastAPI
+          - GitLab
+          - MongoDB Database
+          - Tableau
+          - PowerBI
+          - MongoDB Atlas
+      - title: Urban Air Mobility (UAM) Mission Planning
+        content: This second training project for the Engineering Doctorate program was conducted in collaboration with Airbus in a team of 8 members. It involved developing a reinforcement learning simulation model consisting of autonomous drones flying in an urban area with noise and collision avoidance capabilities in Unity 3D.
+        image: /urban_air_mobility_mission_planning.jpeg
+        badges:
+          - Unity3D
+          - Unity ML-Agents
+          - ACTi-HF acoustics sound tool
+          - GitLab
+          - .NET
+          - C#
+      - title: Realtime Electricity Network Sensitivity Analysis
+        content: The First Training Project of the Engineering Doctorate program involved developing a data analytics model for CGI that uses simulated household power usage data to predict the effects of different loads on an extensive, simulated electricity network. This project was performed in a team of 10 members.
+        image: /realtime_electricity_network_sensitivity_analysis.jpeg
+        badges:
+          - FastAPI
+          - Python
+          - Pytest
+          - Grafana
+          - Docker
+          - Docker Compose
+          - Pandas
+          - NumPy
+          - Jenkins
+          - Ansible
+          - CI/CD
+          - SonarCube
+      - title: Paediatric speech, spatial and qualities (SSQ) of hearing scale
+        content: Our product is a web application used to administer The Speech, Spatial and Qualities of Hearing (SSQ) questionnaires which are used to measure children's hearing disabilities. The application allows parents and children to complete the SSQ questionnaire. After completion their responses are measures and a report is generated showing the calculated metrics. This application was developed in a team of 10 members.
+        image: ssq_application.jpeg
+        badges:
+          - React
+          - Express
+          - NodJS
+          - MongoDB
+          - GitHub
+          - GitHub Actions
+          - CI/CD
+          - Heroku
+          - Mocha
+          - Selenium
+      - title: Music Genre Classification
+        content: This project is an implementation to find the best set of features to classify music genres in a given Kaggle music dataset.
+        image: /music_genre_classification.jpeg
+        featured:
+          name: Public Repo
+          link: https://github.com/mayankshar21/music-genre-classification
+        badges:
+          - Python
+          - JupiterNotebook
+          - Kaggle
+          - Pandas
+          - NumPy
+          - scikit-learn
+          - Matplotlib
+      - title: Sentiment analysis during COVID-19
+        content: This application was designed in a team of 5 to understand the emotions and mobility of people on twitter during COVID-19 in Melbourne.
+        image: /sentiment_analysis.png
+        featured:
+          name: Public Repo
+          link: https://github.com/trundn/COMP90024_Assignment2
+        badges:
+          - OpenStack
+          - Melbourne Research Cloud
+          - Ansible
+          - Docker
+          - CouchDB
+          - Django REST Framework
+          - Twitter API
+          - Python
+          - ReactJS
+          - GeoJSON
+          - LeafletJS
+          - ReactCharts
+          - VADER Lexicon
+
+  contact:
+    enable: true
+    content: My inbox is always open. Whether you want to approach me for new opportunities, ask questions, discuss new ideas or just say hi!
+    btnName: Mail me
+    btnLink: mailto:sharma@mayank.nl
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/mayankshar21
+      linkedin: https://www.linkedin.com/in/mayankshar21/
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
