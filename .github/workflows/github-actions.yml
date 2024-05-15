@@ -8,7 +8,12 @@ on:
       - closed
     branches:
       - 'main'
-    
+      - 'dev'
+
+  push:
+    branches:
+      - 'main'
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -27,32 +32,28 @@ concurrency:
 jobs:
   # Build job
   build:
-    if_merged:
-      if: github.event.pull_request.merged == true
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-        - name: Setup Pages
-          uses: actions/configure-pages@v5
-        - name: Build with Jekyll
-          uses: actions/jekyll-build-pages@v1
-          with:
-            source: ./mayankshar21/public
-            destination: ./_site
-        - name: Upload artifact
-          uses: actions/upload-pages-artifact@v3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./mayankshar21/public
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
   # Deployment job
   deploy:
-    if_merged:
-      if: github.event.pull_request.merged == true
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
